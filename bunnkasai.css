@@ -55,37 +55,49 @@ body {
     color: #ffcc00; /* ホバー時の色 */
 }
 
-.carousel{
+/* カルーセルの外枠（窓） */
+.carousel {
     position: relative;
-    overflow: hidden;
-    width:600px;
-    margin:auto;
-    }
-.carousel-images{
-    display:flex;
-    transition:transform 0.5s ease;
-}
-.carousel-images img{
-    width:60px;
+    overflow: hidden; /* 枠からはみ出した画像は見せない */
+    width: 600px;     /* 横幅を固定 */
+    margin: 50px auto; /* 画面中央に配置 */
+    border: 2px solid #333; /* わかりやすく枠線を追加 */
 }
 
-.prev,.next{
-    position:absolute;
-    top:50px;
-    transform:translateY(-50%);
-    background-color:rgba(0,0,0,0.5);
-    border:none;
-    color:white;
-    cursor:pointer;
-    padding:10px;
-    font-size:18px;
+/* 画像が並んでいる長い帯 */
+/* ※ carouslr → carousel に修正しました */
+.carousel-images {
+    display: flex;    /* 画像を横並びにする */
+    transition: transform 0.5s ease; /* 0.5sかけてふんわり動く */
 }
-.prev{
-    left:10px
+
+/* 個々の画像 */
+.carousel-images img {
+    width: 600px;     /* 外枠と同じ幅にする */
+    height: 300px;    /* 高さを統一 */
+    object-fit: cover; /* 画像が歪まないように調整 */
 }
-.next{
-    right:10px;
+
+/* ボタンの共通スタイル */
+button {
+    position: absolute; /* カルーセルの上に重ねる */
+    top: 50%;           /* 上から50%の位置 */
+    transform: translateY(-50%); /* 垂直方向の中央揃え */
+    background-color: rgba(0,0,0,0.5); /* 半透明の黒 */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
 }
+
+button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* 各ボタンの位置 */
+.prev { left: 10px; }  /* 左ボタン */
+.next { right: 10px; } /* 右ボタン */
 
 /* --- コンテンツの調整 --- */
 .content {
