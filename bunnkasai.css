@@ -54,7 +54,7 @@ body {
 .fixed-header nav ul li a:hover {
     color: #ffcc00; /* ホバー時の色 */
 }
-
+/*カルーセル関係*/
 .carousel {
   display: flex;
   overflow-x: auto;          /* 横スクロールを許可 */
