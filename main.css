@@ -95,3 +95,15 @@ footer {
     padding: 20px;
     margin-top: 50px;
 }
+
+/* --- スクロールバーを非表示にする設定 --- */
+
+/* Chrome, Safari, Edge (Chromium系) 用 */
+#carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Firefox 用 */
+#carousel {
+    scrollbar-width: none; 
+}
