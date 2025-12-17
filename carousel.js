@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    //*****定義欄*****
+
     const carousel = document.querySelector("#carousel");
 
     // 1. カード要素を1つ取得
@@ -10,19 +12,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. CSSで設定した gap: 16px の値
     const gap = 16;
 
-    // 4. 「カード1枚分 + 隙間」の距離を計算
-    const scrollAmount = cardWidth + gap;
+    //要素の数
+    const indexMax = 3;
 
-    // レイアウトが完全に確定するのを少し待つ
-    setTimeout(() => {
-        // 5. 計算した位置へスクロール
+    //indexの場所にスライドする
+    function ScrollToIndex(index){
+        let scrollAmount = (cardWidth + gap) * index;
         carousel.scrollTo({
             left: scrollAmount, 
             behavior: "smooth",
-        });
-        
-        // コンソールで確認用（F12キーで見れます）
-        console.log("移動距離:", scrollAmount);
+        })
+    }
 
-    }, 500); // 0.1秒だと計算が間に合わないことがあるので0.5秒くらいが安全です
+    //*****実行欄*****
+
+    {
+        let intervalCount = 0;
+        setInterval(()=>{
+            ScrollToIndex(intervalCount);
+            intervalCount ++;
+            if (intervalCount > indexMax){
+                intervalCount = 0;
+            }
+        }, 1000);
+    }
+
+    console.log("移動距離:", scrollAmount);
 });
