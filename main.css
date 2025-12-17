@@ -62,6 +62,8 @@ body {
   scroll-snap-type: x mandatory; /* スクロール位置をスナップさせる */
   gap: 16px;                 /* スライド間の隙間 */
   padding: 20px;
+  white-space: nowrap; /* 重要：中身を横一列に並べる */
+  width: 90%;         /* 親の幅 */
 }
 
 .card {
