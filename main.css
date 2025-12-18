@@ -14,6 +14,10 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影をつける */
 }
 
+.main{
+    margin-top: 80px;
+}
+
 .fixed-header .logo {
     height:40px;
     width: auto;    /* 比率を保つ */
