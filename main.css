@@ -188,7 +188,8 @@
 .top-festival-image {
     text-align: center;
     width: 100%;
-    margin-top: 100px;
+
+    margin: 200px 0;
 }
 
 .top-festival-image img {
@@ -221,13 +222,12 @@ nav.crowded-site-invite a{
     margin: 0 auto;
     margin-top: 80px;
 
-    bottom: 0px;
-    position: relative;
-
     transition: all 0.3s;
 
     color: black;
     text-decoration: none;
+
+    border-radius: 10px;
 
     background-color: rgba(255, 255, 255, 0.8);
     background-image: url("images/konzatsu\ joukyou\ gaiyou.png");
@@ -238,7 +238,7 @@ nav.crowded-site-invite a{
 nav.crowded-site-invite a:hover{
     height: 350px;
     width: 73%;
-    bottom: 50px;
+    margin-top: 30px;
 }
 
 nav.crowded-site-invite h3{
@@ -248,4 +248,22 @@ nav.crowded-site-invite h3{
 
 nav.crowded-site-invite h3:hover{
     font-size: 2.5em;
+}
+
+.festival-projects-slide .slide-inner{
+    width: 100%;
+    height: 300px;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    overflow: hidden;
+}
+
+.festival-projects-slide .slide-inner{
+    display: flex;
+    width: calc(250px * 14);
+    animation: scroll 40s linear infinite;
+}
+
+.festival-projects-slide img{
+    height: 100%;
 }
