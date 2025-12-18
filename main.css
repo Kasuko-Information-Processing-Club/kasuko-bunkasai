@@ -1,36 +1,52 @@
 /* --- ヘッダーのスタイル（重要） --- */
 .fixed-header {
-    position: fixed; /* ヘッダーを画面上部に固定 */
+    position: fixed;
+    /* ヘッダーを画面上部に固定 */
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* ヘッダーの高さを指定 */
-    background-color: #333; /* 背景色（黒系） */
-    color: #fff; /* 文字色（白） */
-    display: flex; /* 横並びにする */
-    align-items: center; /* 上下中央揃え */
-    padding: 0 20px; /* 左右の余白 */
-    box-sizing: border-box; /* paddingを含めた幅計算 */
-    z-index: 1000; /* 他の要素より手前に表示 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影をつける */
+    height: 60px;
+    /* ヘッダーの高さを指定 */
+    background-color: #333;
+    /* 背景色（黒系） */
+    color: #fff;
+    /* 文字色（白） */
+    display: flex;
+    /* 横並びにする */
+    align-items: center;
+    /* 上下中央揃え */
+    padding: 0 20px;
+    /* 左右の余白 */
+    box-sizing: border-box;
+    /* paddingを含めた幅計算 */
+    z-index: 1000;
+    /* 他の要素より手前に表示 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* 影をつける */
 }
 
 .fixed-header .logo {
-    height:40px;
-    width: auto;    /* 比率を保つ */
-    display: block; /* 余白除去 */}
-
-.fixed-header nav{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%)
+    height: 40px;
+    width: auto;
+    /* 比率を保つ */
+    display: block;
+    /* 余白除去 */
 }
+
+.fixed-header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
 /* ナビゲーションのスタイル */
 .fixed-header nav ul {
-    list-style: none; /* リストの・を消す */
+    list-style: none;
+    /* リストの・を消す */
     margin: 0;
     padding: 0;
-    display: flex; /* 横並び */
+    display: flex;
+    /* 横並び */
     justify-content: space-evenly;
 }
 
@@ -39,19 +55,22 @@
 }
 
 .fixed-header nav ul li a {
-    color: #464646;
-    text-decoration: none; /* 下線を消す */
+    color: #333;
+    text-decoration: none;
+    /* 下線を消す */
     font-weight: bold;
+    font-size: 1.6rem;
 }
 
 .fixed-header nav ul li a:hover {
-    color: #ffcc00; /* ホバー時の色 */
+    color: #ffcc00;
+    /* ホバー時の色 */
 }
 
 /*コンテンツタグで囲って80px下げる→headerの下に隠れないように*/
 .content {
     /* ヘッダーが固定されている分、中身が隠れないように上部に余白を開ける */
-    padding-top: 80px; 
+    padding-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -65,8 +84,9 @@
     width: 90%;
     max-width: 1000px;
     margin: 20px auto;
-    overflow: hidden; 
-    position: relative; /* 矢印の基準点 */
+    overflow: hidden;
+    position: relative;
+    /* 矢印の基準点 */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -74,11 +94,12 @@
 /* 2. 内側トラック：実際に動く要素 */
 #carousel {
     display: flex;
-    width: 400%; /* カード4枚分 = 100% * 4 */
-    
+    width: 400%;
+    /* カード4枚分 = 100% * 4 */
+
     /* トランジション（滑らかな動き）を適用 */
-    transition: transform 0.5s ease-in-out; 
-    
+    transition: transform 0.5s ease-in-out;
+
     /* CSS Animationは削除 */
     /* animation: slide-show 20s linear infinite; */
 }
@@ -86,7 +107,8 @@
 /* 3. 各カードのスタイル */
 .card {
     /* 1画面に1枚表示するための幅 */
-    flex: 0 0 25%; /* 100% / 4枚 = 25% */
+    flex: 0 0 25%;
+    /* 100% / 4枚 = 25% */
     height: 350px;
     display: flex;
     align-items: center;
@@ -94,12 +116,13 @@
     font-size: 2em;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
 }
 
 /* --- 矢印ボタンのスタイル --- */
-.prev-button, .next-button {
+.prev-button,
+.next-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -114,7 +137,8 @@
     transition: background 0.3s;
 }
 
-.prev-button:hover, .next-button:hover {
+.prev-button:hover,
+.next-button:hover {
     background: rgba(0, 0, 0, 0.7);
 }
 
@@ -137,34 +161,36 @@
     width: 10px;
     height: 10px;
     margin: 0 5px;
-    background-color: #ccc; /* 非アクティブなドット */
+    background-color: #ccc;
+    /* 非アクティブなドット */
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .dot.active {
-    background-color: #2196F3; /* アクティブなドット */
+    background-color: #2196F3;
+    /* アクティブなドット */
 }
 
-.top-festival-image{
+.top-festival-image {
     text-align: center;
     width: 100%;
     margin-top: 100px;
 }
 
-.top-festival-image img{
+.top-festival-image img {
     width: 30%;
     margin: 0 auto;
 }
 
-.top-festival-image h1{
+.top-festival-image h1 {
     font-size: 5em;
     line-height: none;
     display: inline;
 }
 
-.top-festival-image p{
+.top-festival-image p {
     font-size: 0.5em;
     color: #777;
     display: inline;
