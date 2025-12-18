@@ -1,58 +1,82 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
 /* --- ヘッダーのスタイル（重要） --- */
 .fixed-header {
-    position: fixed; /* ヘッダーを画面上部に固定 */
+    position: fixed;
+    /* ヘッダーを画面上部に固定 */
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* ヘッダーの高さを指定 */
-    background-color: #333; /* 背景色（黒系） */
-    color: #fff; /* 文字色（白） */
-    display: flex; /* 横並びにする */
-    align-items: center; /* 上下中央揃え */
-    padding: 0 20px; /* 左右の余白 */
-    box-sizing: border-box; /* paddingを含めた幅計算 */
-    z-index: 1000; /* 他の要素より手前に表示 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影をつける */
+    height: 60px;
+    /* ヘッダーの高さを指定 */
+    background-color: #FFFFFF;
+    /* 背景色（白） */
+    display: flex;
+    /* 横並びにする */
+    background-color:rgba(255, 255, 255, 0.8);
+    /* 背景色（白、透明度80%） */
+    align-items: center;
+    /* 上下中央揃え */
+    padding: 0 20px;
+    /* 左右の余白 */
+    box-sizing: border-box;
+    /* paddingを含めた幅計算 */
+    z-index: 1000;
+    /* 他の要素より手前に表示 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* 影をつける */
 }
 
 .fixed-header .logo {
-    height:40px;
-    width: auto;    /* 比率を保つ */
-    display: block; /* 余白除去 */}
-
-.fixed-header nav{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%)
+    height: 40px;
+    width: auto;
+    /* 比率を保つ */
+    display: block;
+    /* 余白除去 */
+    opacity:1;
+    /* 透明度 */
 }
+
+.fixed-header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity:1;
+    /* 透明度 */
+}
+
 /* ナビゲーションのスタイル */
 .fixed-header nav ul {
-    list-style: none; /* リストの・を消す */
+    list-style: none;
+    /* リストの・を消す */
     margin: 0;
     padding: 0;
-    display: flex; /* 横並び */
-    justify-content: center;
+    display: flex;
+    /* 横並び */
+    justify-content: space-evenly;
 }
 
+.border-left {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.border-right {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
 .fixed-header nav ul li {
-    margin-left: 20px;
+    margin: 0px 20px ;
 }
 
 .fixed-header nav ul li a {
-    color: #fff;
-    text-decoration: none; /* 下線を消す */
+    color: #333;
+    text-decoration: none;
+    /* 下線を消す */
     font-weight: bold;
+    font-size: 1.6rem;
 }
 
 .fixed-header nav ul li a:hover {
-    color: #ffcc00; /* ホバー時の色 */
+    color: #b94047 ;
+    /* ホバー時の色 */
 }
-
 
 
 /* --- コンテンツの調整 --- */
