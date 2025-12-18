@@ -161,9 +161,11 @@
 .top-festival-image h1{
     font-size: 5em;
     line-height: none;
+    display: inline;
 }
 
 .top-festival-image p{
     font-size: 0.5em;
     color: #777;
+    display: inline;
 }
