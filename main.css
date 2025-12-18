@@ -148,6 +148,7 @@
 .top-festival-image{
     text-align: center;
     width: 100%;
+    margin-top: 100px;
 }
 
 .top-festival-image img{
@@ -159,6 +160,7 @@
 
 .top-festival-image h1{
     font-size: 5em;
+    line-height: none;
 }
 
 .top-festival-image p{
