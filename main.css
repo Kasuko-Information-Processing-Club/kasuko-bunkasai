@@ -5,7 +5,7 @@
     width: 100%;
     height: 60px; /* ヘッダーの高さを指定 */
     background-color: #ffffff; /* 背景色（黒系） */
-    color: #ffffff41; /* 文字色（白） */
+    color: #20202000; /* 文字色（黒） */
     display: flex; /* 横並びにする */
     align-items: center; /* 上下中央揃え */
     padding: 0 20px; /* 左右の余白 */
