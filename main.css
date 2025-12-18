@@ -262,13 +262,13 @@ nav.crowded-site-invite h3:hover{
 @keyframes sliding {
   0% {
     /* アニメーション開始時 */
-    right: -20%;
+    right: -100%;
     transform: translateY(0%);
   }
 
   100% {
     /* アニメーション終了時 */
-    right: 120%;
+    right: 200%;
     transform: translateY(0%);
   }
 }
