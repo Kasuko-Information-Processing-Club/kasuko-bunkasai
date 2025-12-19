@@ -65,6 +65,7 @@
     margin: 0px 20px ;
 }
 
+
 .fixed-header nav ul li a {
     color: #333;
     text-decoration: none;
@@ -73,11 +74,46 @@
     font-size: 1.6rem;
 }
 
-.fixed-header nav ul li a:hover {
-    color: #b94047 ;
-    /* ホバー時の色 */
+/*ホバー時に線の色を変えて線を出す機能*/
+
+/* ナビゲーションのリンク本体 */
+.fixed-header nav ul li a {
+    position: relative; /* ★重要：これを追加して線の基準位置にします */
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: inline-block; /* 挙動を安定させるため入れておくと良いです */
+    padding-top: 5px; /* 線と文字が被らないように少し隙間を調整 */
 }
 
+/* ホバー時に文字色を変える */
+.fixed-header nav ul li a:hover {
+    color: #b94047;
+}
+
+/* 線の設定（初期状態） */
+.fixed-header nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;            /* 要素の一番上に配置 */
+    left: 0;
+    width: 100%;       /* 幅は要素いっぱい */
+    height: 3px;       /* 線の太さ */
+    background-color: #b94047; /* ★線の色（文字のホバー色に合わせました） */
+    
+    transform: scaleX(0);       /* 最初は隠す */
+    transform-origin: center;   /* 中央から広がる設定 */
+    transition: transform 0.3s ease-out; /* アニメーション設定 */
+}
+
+/* ★修正箇所：ホバー時に線を伸ばす */
+/* 以前の記述： .fixed-header nav ul li a::before :hover { */
+/* 正しい記述： ↓↓↓ */
+.fixed-header nav ul li a:hover::before {
+    transform: scaleX(1); 
+}
+/*ここまで*/
 
 /*コンテンツタグで囲って80px下げる→headerの下に隠れないように*/
 .content {
