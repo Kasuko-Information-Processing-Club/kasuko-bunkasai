@@ -1,1 +1,117 @@
 *{font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;}
+/* --- ヘッダーのスタイル（重要） --- */
+.fixed-header {
+    position: fixed;
+    /* ヘッダーを画面上部に固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* ヘッダーの高さを指定 */
+    background-color: #FFFFFF;
+    /* 背景色（白） */
+    display: flex;
+    /* 横並びにする */
+    background-color:rgba(255, 255, 255, 0.8);
+    /* 背景色（白、透明度80%） */
+    align-items: center;
+    /* 上下中央揃え */
+    padding: 0 20px;
+    /* 左右の余白 */
+    box-sizing: border-box;
+    /* paddingを含めた幅計算 */
+    z-index: 1000;
+    /* 他の要素より手前に表示 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* 影をつける */
+}
+
+.fixed-header .logo {
+    height: 40px;
+    width: auto;
+    /* 比率を保つ */
+    display: block;
+    /* 余白除去 */
+    opacity:1;
+    /* 透明度 */
+}
+
+.fixed-header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity:1;
+    /* 透明度 */
+}
+
+/* ナビゲーションのスタイル */
+.fixed-header nav ul {
+    list-style: none;
+    /* リストの・を消す */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* 横並び */
+    justify-content: space-evenly;
+}
+
+.border-left {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.border-right {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.fixed-header nav ul li {
+    margin: 0px 20px ;
+}
+
+
+.fixed-header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    /* 下線を消す */
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+/*ホバー時に線の色を変えて線を出す機能*/
+
+/* ナビゲーションのリンク本体 */
+.fixed-header nav ul li a {
+    position: relative; /* ★重要：これを追加して線の基準位置にします */
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: inline-block; /* 挙動を安定させるため入れておくと良いです */
+    padding-top: 5px; /* 線と文字が被らないように少し隙間を調整 */
+}
+
+/* ホバー時に文字色を変える */
+.fixed-header nav ul li a:hover {
+    color: #b94047;
+}
+
+/* 線の設定（初期状態） */
+.fixed-header nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;            /* 要素の一番上に配置 */
+    left: 0;
+    width: 100%;       /* 幅は要素いっぱい */
+    height: 3px;       /* 線の太さ */
+    background-color: #b94047; /* ★線の色（文字のホバー色に合わせました） */
+    
+    transform: scaleX(0);       /* 最初は隠す */
+    transform-origin: center;   /* 中央から広がる設定 */
+    transition: transform 0.3s ease-out; /* アニメーション設定 */
+}
+
+/* ★修正箇所：ホバー時に線を伸ばす */
+/* 以前の記述： .fixed-header nav ul li a::before :hover { */
+/* 正しい記述： ↓↓↓ */
+.fixed-header nav ul li a:hover::before {
+    transform: scaleX(1); 
+}
+/*ここまで*/
