@@ -1,10 +1,25 @@
-/*コンテンツタグで囲って80px下げる→headerの下に隠れないように*/
-.content {
-    /* ヘッダーが固定されている分、中身が隠れないように上部に余白を開ける */
-    padding-top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
+.fixed-bg {
+            /* 【ここが最重要】 画像をウィンドウに対して固定する */
+            background-attachment: fixed; 
+            
+            /* 画像を画面いっぱいに広げる */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* 背景エリアの高さ（全画面） */
+            height: 100vh; 
+            
+            /* コンテンツの中央揃え用（必須ではありません） */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 1枚目の背景画像 */
+        .bg-1 {
+            background-image: url('https://picsum.photos/1920/1080?random=2');
+        }
 
 /* ========================================= */
 /* カルーセル関連のスタイル（JS制御用） */
