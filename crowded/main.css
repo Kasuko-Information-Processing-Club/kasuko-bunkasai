@@ -21,7 +21,7 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影をつける */
 }
 
-.fixed-header .logo {
+.fixed-header .header-logo {
     height:40px;
     width: auto;    /* 比率を保つ */
     display: block; /* 余白除去 */}
