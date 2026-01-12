@@ -17,10 +17,30 @@
         }
 
         /* 1枚目の背景画像 */
+
         .bg-1 {
             background-image: url('https://picsum.photos/1920/1080?random=2');
+            position:relative;
+            display:flex;
+            justify-content:center;
+            align-items:center;
         }
 
+        .reservation-top-kasukousai{
+            font-size:5em;
+            font-weight: bold;
+            color:rgb(0, 0, 0);
+            text-shadow: 2px 2px 4px rgba(58, 58, 58, 0.7);
+        }
+        .reservation-top-logo{
+            width:40%;
+            height:auto;
+            margin-top: none;
+        }
+        .reservation-top-KIPCgif{
+            width:30%;
+            height:auto;
+        }
 /* ========================================= */
 /* カルーセル関連のスタイル（JS制御用） */
 /* ========================================= */
@@ -117,30 +137,6 @@
 .dot.active {
     background-color: #2196F3;
     /* アクティブなドット */
-}
-
-.top-festival-image {
-    text-align: center;
-    width: 100%;
-
-    margin: 200px 0;
-}
-
-.top-festival-image img {
-    width: 30%;
-    margin: 0 auto;
-}
-
-.top-festival-image h1 {
-    font-size: 5em;
-    line-height: none;
-    display: inline;
-}
-
-.top-festival-image p {
-    font-size: 0.5em;
-    color: #777;
-    display: inline;
 }
 
 nav.invite-box a{
