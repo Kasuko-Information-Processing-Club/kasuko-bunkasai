@@ -275,9 +275,33 @@ nav.reservation-site a{
 }
 
 .img-and-text-box img{
-    width: 30%;
+    width: 40%;
+    box-shadow: 1px 1px 10px gray;
 }
 
 .img-and-text-box p{
     font-size: 1.2em;
+    border-bottom: 2px double gray;
+}
+
+/*スマホ版*/
+@media screen and (max-width: 768px) {
+   .img-and-text-box{
+     display: block;
+   }
+   .what-fes h2{
+    font-size: 2em;
+   }
+
+   .img-and-text-box img{
+    width: 90%;
+   }
+
+   .img-and-text-box p{
+    font-size: 0.9em;
+   }
+
+   .festival-projects-slide h1{
+    font-size: 2em;
+   }
 }
