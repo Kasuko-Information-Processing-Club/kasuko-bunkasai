@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // ドットの状態を更新
         updateDots();
     };
-aaaa
+
     // --- 2. ドットの生成と更新関数 ---
     const createDots = () => {
         for (let i = 0; i < cardCount; i++) {
