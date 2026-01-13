@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 *{font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;}
 /* --- ヘッダーのスタイル（重要） --- */
 .fixed-header {
