@@ -80,10 +80,15 @@ F     EEEEE  SSS
 
 
 <body>
-    <header class="fixed-header" async>
+    <header class="fixed-header">
     
         <img src="https://th.bing.com/th/id/OIP.XRjPPpPh5tHSuaEht3i0tAHaBH?w=380&h=58&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1"
             alt="アイコン" class="header-logo">
+
+        <div class="menu-button">
+            <button class="menu-button" aria-label="メニューボタン">☰</button>
+        </div>
+        
     
         <nav class="main-menu">
     
@@ -100,6 +105,14 @@ F     EEEEE  SSS
             </ul>
         </nav>
     </header>
+    <div class="sp-menu">
+        <h3>メニュー</h3>
+        <ul>
+            <li><a href="#home">お知らせ</a></li>
+            <li><a href="reservation/index.html">整理券を予約</a></li>
+            <li><a href="https://manage-crowded.onrender.com/">混雑状況</a></li>
+        </ul>
+    </div>
 
     <div class="fixed-bg bg-1">
         <img src="./images/春高祭ll.gif" class="kasuko-gif" alt="" async>
@@ -171,6 +184,7 @@ F     EEEEE  SSS
 
     <script src="carousel.js"></script>
     <script src="javascripts/animations.js"></script>
+    <script src="javascripts/buttons.js"></script>
 </body>
 
 

@@ -13,7 +13,7 @@ crowdedSiteInvite.forEach((elem)=>{
 })});
 
 //ヘッダーを遅れて表示
-const headerRug = 5000;
+const headerRug = 500;
 setTimeout(() => {
     const header = document.querySelector('.fixed-header');
     header.style.transform = 'translateY(0)';
