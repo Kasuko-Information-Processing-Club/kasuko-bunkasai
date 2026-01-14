@@ -2,7 +2,7 @@
 new type web for kasuko-bunnkasai
 *日本語は下にあります*
 
-# English
+## English
 
 member:
 Made by Kirito-darkness, manmoth, 3110kota, /smartphooone, koboooo
@@ -12,7 +12,7 @@ Made by Kirito-darkness, manmoth, 3110kota, /smartphooone, koboooo
 - We allow that you learn from this.
 - Please join our club!!!!!!!
 
-# 日本語版
+## 日本語版
 
 メンバー
 Kirito-darkness, manmoth, 3110kota, /smartphooone, koboooo
