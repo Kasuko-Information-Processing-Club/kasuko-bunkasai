@@ -9,7 +9,7 @@ Made by Kirito-darkness, manmoth, 3110kota, /smartphooone, koboooo
 
 - We are Kasuko-IPC. 😄
 - Kasuko-IPC is an abbreviation Kasuko Information Processing Club.
-- Kasuko is a high school in Saitama.
+- Kasuko is a very smart high school in Saitama lol.
 - This web is for school festival at Kasuko.
 - We don't have server, therefore we published a static web in github.
 - We will make two functions that is to check congestion and reservation status.
@@ -25,7 +25,7 @@ Kirito-darkness, manmoth, 3110kota, /smartphooone, koboooo
 
 - 私たちはKasuko-IPCです。 😄
 - Kasuko-IPCは情報処理部 Kasuko Information Processing Club の略です。
-- 春高は埼玉にある高校です。
+- 春高は埼玉にあるとても利口な（笑）高校です。
 - このサイトは春高の文化祭のためのサイトです。
 - 私たちはサーバーを持っていませんので、静的なウェブサイトをgithubにて公開しています
 - 私たちは混雑状況と予約状況の確認の二つの機能を作る予定です。
