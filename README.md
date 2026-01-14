@@ -1,6 +1,6 @@
 # Kasuko-Informatioon-Processing-Club official web for Kasuko Festival
 new type web for kasuko-bunnkasai
-* 日本語は下にあります *
+*日本語は下にあります*
 
 # English
 
