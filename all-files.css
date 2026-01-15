@@ -41,6 +41,7 @@ body{
     top: 20px;       /* 上からの位置 */
     right: 20px;     /* 右からの位置 */
     z-index: 10001;  /* メニュー(10000)より手前に表示 */
+    display: none;
 }
 
 /* ボタン自体のスタイル（装飾） */
@@ -203,6 +204,7 @@ button.menu-button {
     }
     .menu-button button{
         text-align: center;
+        display: block;
         width: 40px;
         height: 40px;
         position: relative;
@@ -213,5 +215,6 @@ button.menu-button {
     }
 
 }
+
 
 
