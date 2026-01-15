@@ -34,6 +34,6 @@ Kirito-darkness, manmoth, 3110kota, /smartphooone, koboooo
 - ぜひ、我々の部活に入ってください！
 
 test-page
-[テストページ](https://kirito-darkness-school.github.io/kasuko-bunnkasai/)
+[テストページ](https://kasuko-information-processing-club.github.io/kasuko-bunkasai/)
 
 last edit is 2026/01/14 22:19 :accessibility:
