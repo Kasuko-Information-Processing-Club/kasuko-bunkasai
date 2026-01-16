@@ -33,7 +33,6 @@ body{
     transition: all 0.5s ease;
 }
 
-/* --- ここから追加・修正 --- */
 
 /* メニューボタンを常に最前面に固定表示 */
 .menu-button {
@@ -46,18 +45,26 @@ body{
 
 /* ボタン自体のスタイル（装飾） */
 button.menu-button {
+   /* --- ▼ ここから配置の魔法 ▼ --- */
+    display: flex;             /* フレックスボックス化 */
+    justify-content: center;   /* 横方向の真ん中へ */
+    align-items: center;       /* 縦方向の真ん中へ */
+    /* --- ▲ ここまで配置の魔法 ▲ --- */
+
+    /* --- ▼ 大きさと形を整える ▼ --- */
     width: 50px;               /* 幅を固定（正方形にする） */
     height: 50px;              /* 高さを固定（正方形にする） */
     padding: 0;                /* 余計な内側の隙間をゼロにする */
-    
+    /* --- ▲ 大きさと形を整える ▲ --- */
+
+    /* その他の装飾 */
     background: #333;
     color: #fff;
     border: none;
-    padding: 10px 15px;
-    font-size: 100%;
+    font-size: 1.8rem;         /* 文字の大きさ */
     cursor: pointer;
     border-radius: 5px;
-    display: none;
+    line-height: 1;            /* 行間によるズレを防止 */
 }
 
 /* スマホ用メニュー本体のスタイル */
