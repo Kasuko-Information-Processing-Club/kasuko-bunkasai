@@ -1,0 +1,78 @@
+.slider-container{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.slider-wrapper{
+    display:flex;
+    height: 100%;
+    /*JSで動かすため、初期位置を0に設定*/
+    transform: translateX(0);
+    /*ドラッグ中はtransitionを切って、離した時だけアニメーションをかけたい*/
+    cursor: grab;
+}
+
+/*classに"grabbing"がついたらカーソルを変える*/
+.slider-wrapper.grabbing{
+    cursor: grabbing;
+}
+
+.slide{
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+.slide:nth-child(1){
+    background:linear-gradient(45deg, #ff6a00, #ee0979);
+}
+.slide:nth-child(2){
+    background:linear-gradient(45deg, #43cea2, #185a9d);
+}
+.slide:nth-child(3){
+    background:linear-gradient(45deg, #f7971e, #ffd200);
+}
+.slide:nth-child(4){
+    background:linear-gradient(45deg, #00c6ff, #0072ff);
+}
+.slide:nth-child(5){
+    background:linear-gradient(45deg, #7b4397, #dc2430);
+}
+
+/*　点々系　*/
+/* --- インジケーター（点々の容器） --- */
+.slider-indicators {
+    position: absolute;
+    bottom: 20px; /* 下からの位置 */
+    left: 50%;
+    transform: translateX(-50%); /* 真ん中に配置 */
+    display: flex;
+    gap: 15px; /* 点同士の間隔 */
+    z-index: 10; /* 画像より手前に表示 */
+}
+
+/* --- 点のデザイン --- */
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明の白 */
+    border-radius: 50%; /* 丸くする */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* --- 現在地（青く光る） --- */
+.indicator.active {
+    background-color: #3b82f6; /* 青色 */
+    transform: scale(1.2); /* 少し大きく */
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}

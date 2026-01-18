@@ -13,6 +13,7 @@
     <title>お知らせ　春日部高校文化祭</title>
     <link rel="stylesheet" href="all-files.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="crousel/crousel-stylesheet.css">
 
 </head>
 
@@ -121,22 +122,20 @@ F     EEEEE  SSS
     </div>
     <main class="content">
 
-        <div id="outer-carousel">
-            <div id="carousel">
-                <div class="card" style="background: #ff9a9e;">スライド 1</div>
-                <div class="card" style="background: #a18cd1;">スライド 2</div>
-                <div class="card" style="background: #fad0c4;">スライド 3</div>
-                <div class="card" style="background: #84fab0;">スライド 4</div>
-            </div>
+<!--スライダー-->
+<div class="slider-container">
+    <div class="slider-wrapper">
+        <div class="slide" style="background-color: tomato;">1</div>
+        <div class="slide" style="background-color: lightblue;">2</div>
+        <div class="slide" style="background-color: lightgreen;">3</div>
+        <div class="slide" style="background-color: lightyellow;">4</div>
+        <div class="slide" style="background-color: lightpink;">5</div>
 
-            <button class="prev-button">＜</button>
-            <button class="next-button">＞</button>
-        </div>
-
-        <div id="pagination-dots">
-        </div>
-
-        <hr>
+    </div>
+    <div class="slider-indicators">
+    </div>
+</div>
+<!--スライダーここまで-->
 
         <section class="what-fes">
             <h2>春高祭へようこそ！</h2>
@@ -183,7 +182,7 @@ F     EEEEE  SSS
 
 
 
-    <script src="carousel.js"></script>
+    <script src="crousel/crousel-script.js"></script>
     <script src="javascripts/animations.js"></script>
     <script src="javascripts/buttons.js"></script>
 </body>
