@@ -112,7 +112,7 @@ button.menu-button {
 
 
 .fixed-header .header-logo {
-    height: 40px;
+    height: 80%;
     width: auto;
     /* 比率を保つ */
     display: block;
@@ -206,8 +206,8 @@ button.menu-button {
 /*スマホ版*/
 @media screen and (max-width: 768px) {
    .fixed-header .header-logo {
-        height: auto;
-        width: 20%;
+        height: 80%;
+        width: auto;
     }
     .menu-button{
         display: block;
@@ -227,6 +227,7 @@ button.menu-button {
     }
 
 }
+
 
 
 
